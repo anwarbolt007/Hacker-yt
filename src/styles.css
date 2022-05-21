@@ -1,0 +1,136 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #111827;
+  font-family: sans-serif;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: underline;
+}
+input{
+color:#82A284;
+background-color: transparent;
+outline: none;
+border:1px solid slategray;
+padding: 15px 20px;
+font-size: 16px;
+margin-right: 12px;
+border-radius: 7px;
+}
+button{
+background-color:white;
+padding:15px 20px;
+border:1px solid white;
+font-size: 16px;
+border-radius: 7px;
+transition: all 0.15s ease-in-out;
+}
+button:hover{
+  background-color: transparent;
+  color:#82A284;
+  cursor: pointer;
+}
+.section{
+  padding:50px;
+  max-width: 992px;
+  margin: auto;
+}
+@media (min-width:1024px){
+  form{
+    display: flex;
+    align-items: center;
+  }
+  input{
+    width: 100%;
+  }
+}
+form{
+  margin-bottom: 20px;
+}
+.section .title h1{
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.section .title a{
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+  color: slategray;
+  cursor: pointer;
+}
+.section .title a:hover{
+  color: white;
+}
+.section .cards div{
+  background-color: #161f34;
+  padding: 20px;
+  border-radius: 7px;
+}
+.section .cards div h2{
+  color:white;
+  margin-bottom: 15px;
+}
+.section .cards div ul{
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+.section .cards div ul li:first-child{
+  color:#82A284;
+}
+.section .cards div ul li{
+  color:slategray;
+}
+.section .cards div p{
+  color: slategray;
+}
+.section .cards{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap:1rem;
+}
+@media(min-width:768px){
+ .section .cards{
+   grid-template-columns: repeat(2,1fr);
+ }
+}
+.spinner{
+  width:50px;
+  height:50px;
+  border:1px solid slategray;
+  border-top: 1px solid red;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+  position: absolute;
+  top:50%;
+  left:48%;
+  transform: translate(-48%,-50%);
+}
+@keyframes spin{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.category{
+  color:slategray;
+  margin-bottom: 15px;
+}
+.category span{
+  color:#a3b4c4;
+  font-weight: bold;
+  text-transform: capitalize;
+}
